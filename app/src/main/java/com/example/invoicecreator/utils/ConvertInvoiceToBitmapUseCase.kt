@@ -19,6 +19,7 @@ object ConvertInvoiceToBitmapUseCase {
         val invoice = LayoutInvoiceBinding.inflate(inflater)
         invoice.textViewSubTotal.text = invoiceModel.subTotal.toString()
         invoice.textViewTotal.text = invoiceModel.total.toString()
+        invoice.textViewDeliveryFees.text = invoiceModel.deliveryFees.toString()
 
         var displayMetrics = DisplayMetrics()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -45,6 +46,6 @@ object ConvertInvoiceToBitmapUseCase {
         val canvas = Canvas(bitmap)
         invoice.root.draw(canvas)
 
-        return Bitmap.createScaledBitmap(bitmap, 700, 842, true)
+        return Bitmap.createScaledBitmap(bitmap, 385, 600, true)
     }
 }
