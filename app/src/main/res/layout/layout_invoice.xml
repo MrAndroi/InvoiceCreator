@@ -8,13 +8,16 @@
     android:background="#DCDCDC"
     >
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView"
         style="@style/TextAppearance.MaterialComponents.Headline4"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:textColor="@color/white"
+        android:text="Brandatt"
+        android:textAlignment="center"
+        android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
