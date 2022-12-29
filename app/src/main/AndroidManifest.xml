@@ -26,7 +26,13 @@
 
         <activity
             android:name=".InvoiceSummaryActivity"
-            android:label="YourAppName"
+            android:theme="@style/Theme.InvoiceCreator"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".ScanBarcodeActivity"
             android:theme="@style/Theme.InvoiceCreator"
             android:exported="true">
 

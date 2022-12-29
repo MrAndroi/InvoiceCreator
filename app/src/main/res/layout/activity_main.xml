@@ -48,10 +48,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="Next"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Go to printer"
+        app:layout_constraintBottom_toTopOf="@+id/button_scanner"
         app:layout_constraintEnd_toEndOf="@+id/edit_text_total"
         app:layout_constraintStart_toStartOf="@+id/edit_text_total" />
 
+
+    <Button
+        android:id="@+id/button_scanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Go to Scanner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edit_text_total"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_total" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

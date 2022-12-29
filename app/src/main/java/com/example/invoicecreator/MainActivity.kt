@@ -2,13 +2,12 @@ package com.example.invoicecreator
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.invoicecreator.databinding.ActivityMainBinding
 import com.example.invoicecreator.utils.InvoiceModel
 
-class MainActivity: AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
@@ -20,7 +19,7 @@ class MainActivity: AppCompatActivity() {
         binding.buttonNext.setOnClickListener {
             val subTotal = binding.editTextSubTotal.text.toString().toFloatOrNull()
             val total = binding.editTextTotal.text.toString().toFloatOrNull()
-            if(subTotal == null || total == null) {
+            if (subTotal == null || total == null) {
                 Toast.makeText(this, "Please enter valid amounts", Toast.LENGTH_SHORT).show()
             } else {
                 val intent = Intent(this, InvoiceSummaryActivity::class.java)
@@ -32,6 +31,11 @@ class MainActivity: AppCompatActivity() {
                 startActivity(intent)
             }
 
+        }
+
+        binding.buttonScanner.setOnClickListener {
+            val intent = Intent(this, ScanBarcodeActivity::class.java)
+            startActivity(intent)
         }
     }
 
